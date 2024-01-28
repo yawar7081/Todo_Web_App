@@ -4,9 +4,11 @@ import TaskList from './components/TaskList'
 
 function App() {
   return (
-    <div>
+    <div className = "w-screen h-screen bg-[#4942E4] flex items-center justify-center">
+      <div className="w-[500px] rounded-md px-4 py-5 bg-[#11009E] flex flex-col gap-3">
       <TaskForm/>
       <TaskList/>
+      </div>
     </div>
   )
 }

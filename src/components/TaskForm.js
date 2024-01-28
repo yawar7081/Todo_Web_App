@@ -13,7 +13,11 @@ function TaskForm() {
         e.preventDefault();
         addTask(newTask);
         setNewTask("");
-    }}>
+    }}
+    
+
+    className='flex justify-between'
+    >
         <input
             type='text'
             value={newTask}
@@ -21,8 +25,9 @@ function TaskForm() {
             onChange={(e) => {
                 setNewTask(e.target.value)
             }}
+            className='w-full h-14 px-4 rounded-l-xl text-xl'
         />
-        <button>Add</button>
+        <button className='text-xl px-8 text-white font-semibold bg-black rounded-r-xl'>Add</button>
     </form>
   )
 }

@@ -16,14 +16,16 @@ export function AppContextProvider({children}){
                 text:newTask
             }
     
-            setTask([...task,taskObject])
+            setTask(prevState=>[...prevState,taskObject])
         }
     }
 
-    const removeTask=(id)=>{
+    const removeTask=(todoId)=>{
+        console.log(task);
         setTask(
-            task.filter((todo) => todo.id != id)
-        )
+            task.filter((todo) => todo.id != todoId)
+            )
+            console.log(task);
     }   
 
 

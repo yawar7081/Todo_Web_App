@@ -4,18 +4,19 @@ import SingleTask from './SingleTask';
 
 function TaskList() {
 
-    const {task} = useContext(AppContext);
-
+    // const {task} = useContext(AppContext);
+    // console.log(task)
 
   return (
     <div>
-        {
-            task?.map((todo) => {
-                return <SingleTask
-                  todo={todo}
-                />
-            })
-        }
+        <AppContext.Consumer>
+          {
+            state => state.task.map((todo) => <SingleTask
+              key={todo.id}
+              todo={todo}
+            />)
+          }
+        </AppContext.Consumer>
     </div>
   )
 }
