@@ -11,7 +11,7 @@ function SingleTask({ todo }) {
   const { removeTask } = useContext(AppContext);
 
   return (
-    <div className="flex justify-between h-14 bg-black shadow shadow-white px-4 rounded-md">
+    <div className="flex justify-between h-14 bg-black shadow mt-4 shadow-white px-4 rounded-md">
       <div className="flex gap-3 justify-center items-center text-xl text-white font-semibold">
         <input
           type="checkbox"
